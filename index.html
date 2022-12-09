@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 require_once "db.php";
 
 $stmt = $pdo->query("select * from works");
@@ -111,6 +110,38 @@ $works = $stmt->fetchAll();
                             <textarea name="text" required ros="4" placeholder="Сообщение"></textarea>
                             <input class="btn btn-bg" type="submit" value="Отправить">
                         </form>
+                        <form action="#" method="post" id="sendform" enctype="multipart/form-data">
+                            <fieldset>
+                            <h3>Форма заказа</h3>
+    <p>
+      <label>Имя*:</label>
+      <input name="name" value="" size="40" type="text" class="required" />
+    </p>
+
+    <p> 
+      <label>Контактный номер*:</label>
+      <input name="tel" value="" size="40" class="required" type="tel" />
+    </p>
+
+    <p>
+      <label>E-mail:</label>
+      <input name="email" value="" size="40" type="email" />
+    </p>
+
+    <p>
+      <label>Описание заказа:</label>
+      <textarea name="message" cols="40" rows="10" /> </textarea>
+    </p>
+
+    <p>
+      <label>Прикрепить файл:</label>
+      <input name="file" value="1" size="40" type="file" />
+    </p>
+
+    <input value="Отправить" name="sendMail" type="submit" />
+  </fieldset>
+
+                </form>
                     </div>
                 </div>
             </div>
@@ -121,6 +152,8 @@ $works = $stmt->fetchAll();
             </div>
         </footer>
         <script src="assets/js/lightgallery.min.js"></script>
+        <script src="assets/js/jquery.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.validate.js" type="text/javascript"></script>
         <script>
             lightGallery(document.getElementById('lightgallery'));
         </script>
@@ -132,6 +165,43 @@ $works = $stmt->fetchAll();
                 behavior: 'smooth'
             });
             }
+        </script>
+        <script>
+            // Как только страничка загрузилась 
+  window.onload = function () { 
+    // проверяем поддерживает ли браузер FormData 
+      if(!window.FormData) {
+        /* * если не поддерживает, то выводим 
+        * то выводим предупреждение вместо формы */
+        var div = ge('content');
+        div.innerHTML = "Ваш браузер не поддерживает объект FormData";
+        div.className = 'notSupport'; 
+      }
+  }
+
+$(document).ready(function(){
+  // =validation
+  var errorTxt = 'Ошибка отправки';
+  $("#sendform").validate({
+    submitHandler: function(form){
+      var form = document.forms.sendform,
+        formData = new FormData(form),
+        xhr = new XMLHttpRequest();
+
+      xhr.open("POST", "/send.php");
+      
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if(xhr.status == 200) {
+            $("#sendform").html('<p class="thank">Данные отправлены!<p>');
+          }
+        }
+      };
+      xhr.send(formData);
+    }
+  }); 
+})
+
         </script>
     </body>
 </html>
