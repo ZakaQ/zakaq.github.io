@@ -36,7 +36,7 @@ section {
     position: relative;
 }
 .section-bg {
-    background: url("img/bg.png");
+    background: url("../img/bg.png");
     color: #fff;
 }
 h1 {
