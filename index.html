@@ -12,9 +12,30 @@ $works = $stmt->fetchAll();
     <head>
         <meta charset="utf-8">
         <title>Мой сайт</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/lightgallery.css">
-        <link rel="stylesheet" href="css/lg-transitions.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/lightgallery.css">
+        <link rel="stylesheet" href="assets/css/lg-transitions.css">
+        <style>
+                    .section-bg {
+                        background: url("assets/img/bg.png");
+                        color: #fff;
+                    }
+                    @font-face {
+                        font-family: "Montserrat";
+                        src: url("assets/fonts/Montserrat-Bold.ttf");
+                        font-weight: 700;
+                    }
+                    @font-face {
+                        font-family: "Montserrat";
+                        src: url("assets/fonts/Montserrat-Regular.ttf");
+                        font-weight: 400;
+                    }
+                    @font-face {
+                        font-family: "Lora";
+                        src: url("assets/fonts/Lora.ttf");
+                        font-weight: 400;
+                    }
+        </style>
     </head>
     <body>
         <section class="first-screen section-bg">
@@ -28,7 +49,7 @@ $works = $stmt->fetchAll();
                 </div>
             </div>
             <a class="chevron" href="#">
-                <img src="img/chevron.svg" alt="scroll">
+                <img src="assets/img/chevron.svg" alt="scroll">
              </a>
         </section>
         <section>
@@ -45,32 +66,32 @@ $works = $stmt->fetchAll();
                 <h2 id="portfolio">Портфолио</h2>
             </div>
             <div id="lightgallery" class="gallery">
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-               <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+               <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
-            <a class="img-wrapper" href="img/placeholder.jpg">
-                <img src="img/placeholder.jpg" />
+            <a class="img-wrapper" href="assets/img/placeholder.jpg">
+                <img src="assets/img/placeholder.jpg" />
             </a>
             </div>
         </section>
@@ -99,7 +120,7 @@ $works = $stmt->fetchAll();
                 Copyright &copy; 2020. Все права защищены.
             </div>
         </footer>
-        <script src="js/lightgallery.min.js"></script>
+        <script src="assets/js/lightgallery.min.js"></script>
         <script>
             lightGallery(document.getElementById('lightgallery'));
         </script>
