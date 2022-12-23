@@ -1,0 +1,262 @@
+        *{
+            box-sizing: border-box;
+        }
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        /* Add a background color when the inputs get focus */
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+            background-color: #c74838;
+            color: white;
+            font-family: Montserrat;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            padding: 17px 25px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            background-color: #c74838;
+            color: white;
+            font-family: Montserrat;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            padding: 17px 25px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+         .signupbtn {
+            background-color: #ff4c34;
+         }
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+        
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 35vh;
+            top: 5vh;
+            width: 50%; /* Full width */
+            height: 100%; /* Full height */ /* Enable scroll if needed */
+            background-color: #474e5d;
+            padding-top: 50px;
+            text-align: left;
+            align-items: center;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 90%; /* Could be more or less, depending on screen size */
+        }
+        
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        form p {
+            text-align: left;
+            margin-left: 0;
+        }
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 200px) {
+            .cancelbtn, .signupbtn {
+            width: 100%;
+            }
+        }
+body {
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+section {
+    padding: 90px 0;
+}
+.first-screen {
+    height: 100vh;
+    clip-path: ellipse(100% 60% at 50% 35%);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-family: Lora;
+    font-size: 80px;
+}
+.btn {
+    padding: 13px 20px;
+    color: #fff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+.btn-bg {
+    background: #c74838;
+}
+.btn-outline {
+    border-color: #c74838;
+}
+.chevron {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease-in-out;
+    animation: chevron-animation infinite 2s ease-in-out;
+}
+h2 {
+    font-family: Lora;
+    font-size: 48px;
+    margin: 0 0 60px;
+}
+p {
+    font-size: 20px;
+    line-height: 2;
+    font-family: Montserrat;
+    margin-left: 380px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img-wrapper {
+    width: 350px;
+    height: 290px;
+    margin-bottom: 50px;
+    margin-left: 65px;
+    margin-right: 65px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-wrapper img {
+    object-fit: cover;
+}
+.d-flex {
+    display: flex;
+}
+.w-60 {
+    width: 60%;
+}
+.w-40 {
+    width: 40%;
+}
+.pr-4 {
+    padding-right: 4rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.pr-4 p{
+    margin-left: 0px;
+}
+input,
+textarea {
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border: none;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}
+footer {
+    padding: 50px 0;
+    text-align: center;
+}
+.btn:hover {
+    background: #e63a23;
+}
+.chevron:hover {
+    transform: translate(-50%, 25px);
+}
+.img-wrapper:hover {
+    transform: scale(1.05);
+}
+@keyframes chevron-animation {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+.chevron:hover {
+    animation-play-state: paused;
+}
+.chevron img {
+    transition: all 0.5s ease-in-out;
+}
+.chevron:hover img {
+    transform: translateY(25px);
+}
