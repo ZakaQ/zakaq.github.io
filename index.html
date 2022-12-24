@@ -5,7 +5,6 @@ $stmt = $pdo->query("select * from works");
 $works = $stmt->fetchAll();
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -43,10 +42,10 @@ $works = $stmt->fetchAll();
                     <h1>Веб-разработчик <br> к вашим услугам</h1>
                 </div>
                 <div>
-                    <a class="btn btn-bg" onclick="smoothScroll('#about')" href="#">Узнать больше</a>
-                    <a class="btn btn-outline" onclick="smoothScroll('#portfolio')" href="#">Нанять меня</a>
+                    <a class="btn btn-bg custom-btn btn-6" onclick="smoothScroll('#about')" href="#"><span>Узнать больше</span></a>
+                    <a class="btn btn-outline custom-btn btn-6" onclick="smoothScroll('#portfolio')" href="#"><span>Нанять меня</span></a>
                     <!-- Button to open the modal -->
-<button onclick="document.getElementById('id01').style.display='block'">Зарегистрироваться</button>
+<button class="btn btn-outline custom-btn-1 btn-7" onclick="document.getElementById('id01').style.display='block'"><span>Зарегистрироваться</span></button>
 
 <!-- The Modal (contains the Sign Up form) -->
 <div id="id01" class="modal">
@@ -57,7 +56,7 @@ $works = $stmt->fetchAll();
       <p>Пожалуйста заполните форму, чтобы создать аккаунт.</p>
       <hr>
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Введите Email" name="email" required>
+      <input type="text" placeholder="Enter Email" name="email" required>
 
       <label for="psw"><b>Пароль</b></label>
       <input type="password" placeholder="Введите пароль" name="psw" required>
@@ -141,7 +140,7 @@ $works = $stmt->fetchAll();
                             <input name="name" required type="text" placeholder="Как к вам обращаться">
                             <input name="email" required type="email" placeholder="Ваш email">
                             <textarea name="text" required ros="4" placeholder="Сообщение"></textarea>
-                            <input class="btn btn-bg" type="submit" value="Отправить">
+                            <input class="btn btn-bg custom-btn-1 btn-7" type="submit" value="Отправить"><span>Отправить</span>
                         </form>
                         <form action="#" method="post" id="sendform" enctype="multipart/form-data">
                             <fieldset>
@@ -171,7 +170,7 @@ $works = $stmt->fetchAll();
       <input name="file" value="1" size="40" type="file" />
     </p>
 
-    <input value="Отправить" name="sendMail" type="submit" />
+    <input class="btn btn-bg custom-btn btn-6" value="Отправить" name="sendMail" type="submit" />
   </fieldset>
 
                 </form>
