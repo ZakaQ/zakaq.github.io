@@ -1,6 +1,6 @@
-*{
-  box-sizing: border-box;
-}
+        *{
+            box-sizing: border-box;
+        }
         /* Full-width input fields */
         input[type=text], input[type=password] {
             width: 100%;
@@ -317,14 +317,14 @@ footer {
 }
 .btn-6:hover {
     background: transparent;
-    color: #000;
+    color: #fff;
     font-weight: 700;
     font-size: 15px;
     box-shadow: none;
 }
 .btn-7:hover {
     background: transparent;
-    color: #000;
+    color: #fff;
     box-shadow: none;
     font-weight: 700;
 }
